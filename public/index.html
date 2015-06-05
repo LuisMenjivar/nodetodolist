@@ -1,1 +1,36 @@
-<h1>Hello World</h1>
+<!DOCTYPE>
+<html>
+<head>
+  <title>Todo List</title>   
+</head>
+<body ng-app="todoApp">
+    <h1>Todo List</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Todo</th>
+          <th>Action</th>
+          <th></th>
+        </tr>
+        <tr>
+            <td><input ng-model="todo"></td>
+            <td><button >Add Todo</button></td>
+            <td><button >Update</button></td>
+            <td><button >Cancel</button></td>
+            </td>
+        </tr>
+        <tr >
+            <td>{{todo}}</td>
+            <td><button >Delete</td></button>  
+            <td><button >Edit</button></td>
+        </tr>
+      </thead>
+    </div> <!-- div table -->
+
+  <!-- angular  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="controllers/todoscontroller.js"></script>
+</body>
+
+
+</html>
