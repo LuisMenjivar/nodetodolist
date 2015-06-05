@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/LuisMenjivar/nodetodolist/issues"
   },
-  "homepage": "https://github.com/LuisMenjivar/nodetodolist#readme"
+  "homepage": "https://github.com/LuisMenjivar/nodetodolist#readme",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
 }
