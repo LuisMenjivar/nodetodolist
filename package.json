@@ -1,0 +1,24 @@
+{
+  "name": "nodetodolist",
+  "version": "1.0.0",
+  "description": "node todo list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisMenjivar/nodetodolist.git"
+  },
+  "keywords": [
+    "node",
+    "todolist",
+    "todoapp"
+  ],
+  "author": "Luis Menjivar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisMenjivar/nodetodolist/issues"
+  },
+  "homepage": "https://github.com/LuisMenjivar/nodetodolist#readme"
+}
