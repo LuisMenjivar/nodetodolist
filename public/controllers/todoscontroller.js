@@ -12,4 +12,13 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     });
   };
 
+  $scope.deleteTodo = function (id){
+    $http.delete('/todo/'+id).success(function (response){  
+      var todo = $scope.todos.filter(function(response) {
+        return response._id === id;
+      })[0];
+      index = $scope.todos.indexOf(todo);
+      $scope.todos.splice(index, 1);
+    })
+  }
 }])
