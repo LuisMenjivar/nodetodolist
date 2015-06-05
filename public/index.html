@@ -5,7 +5,7 @@
 </head>
 <body ng-app="todoApp">
     <h1>Todo List</h1>
-    <table class="table">
+    <table class="table" ng-controller="todosController">
       <thead>
         <tr>
           <th>Todo</th>
@@ -13,14 +13,14 @@
           <th></th>
         </tr>
         <tr>
-            <td><input ng-model="todo"></td>
+            <td><input ng-model="todo.name"></td>
             <td><button >Add Todo</button></td>
             <td><button >Update</button></td>
             <td><button >Cancel</button></td>
             </td>
         </tr>
-        <tr >
-            <td>{{todo}}</td>
+        <tr ng-repeat="todo in todos">
+            <td>{{todo.name}}</td>
             <td><button >Delete</td></button>  
             <td><button >Edit</button></td>
         </tr>
