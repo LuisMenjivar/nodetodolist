@@ -3,6 +3,7 @@ var todoApp = angular.module('todoApp', []);
 todoApp.controller('todosController', ['$scope', '$http', function ($scope, $http){
   $http.get('/todos').success(function(response){
     $scope.todos = response
+    $scope.updateButton = true;
   })
   // ADD TODO
   $scope.addTodo = function(){
@@ -26,6 +27,9 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     index = $scope.todos.indexOf(todo)
     console.log(index);
     $scope.todo = todo;
+    $scope.addButton = true;
+    $scope.deleteButton = true
+    $scope.updateButton = false;
   };
  // UPDATE TODO
   $scope.update = function () {
@@ -33,8 +37,16 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     $http.put('/todo/'+id, $scope.todo).success(function(response){
       $scope.todos.splice(index, 1, response);
     });
+    $scope.addButton = false;
+    $scope.deleteButton = false
+    $scope.updateButton = true;
     $scope.todo = '';
   };
+  $scope.cancel = function (){
+    $scope.addButton = false;
+    $scope.deleteButton = false
+    $scope.todo = '';
+  }
 
 }]) //end of Todos controller
 

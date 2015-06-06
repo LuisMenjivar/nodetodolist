@@ -47,7 +47,6 @@ app.post('/todo', function (req, res){
 
 // DELETE ROUTE
 app.delete('/todo/:id', function (req, res){
-
   var todo = Todo.where({_id: req.params.id});
   todo.findOneAndRemove(function (err, doc){
     if (err) console.error (err)

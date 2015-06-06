@@ -21,14 +21,14 @@
         </tr>
         <tr>
             <td><input class="form-control" ng-model="todo.name"></td>
-            <td><button class="btn btn-primary" ng-click="addTodo()">Add Todo</button></td>
-            <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
-            <button class="btn btn-warning" >Cancel</button></td>
+            <td><button class="btn btn-primary" ng-click="addTodo()" ng-disabled="addButton">Add Todo</button></td>
+            <td><button class="btn btn-info" ng-click="update()" ng-disabled="updateButton">Update</button>&nbsp;&nbsp;
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button></td>
             </td>
         </tr>
         <tr ng-repeat="todo in todos | orderBy: 'name'">
             <td>{{todo.name}}</td>
-            <td><button class="btn btn-danger" ng-click="deleteTodo(todo._id)">Delete</td></button>  
+            <td><button class="btn btn-danger" ng-click="deleteTodo(todo._id)" ng-disabled="deleteButton">Delete</td></button>  
             <td><button class="btn btn-warning" ng-click="edit(todo)" >Edit</button></td>
         </tr>
       </thead>
