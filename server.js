@@ -53,6 +53,17 @@ app.delete('/todo/:id', function (req, res){
     if (err) console.error (err)
     if (doc) {
       res.json(doc)
-    }
+    };
+  });
+});
+
+// UPDATE ROUTE
+app.put('/todo/:id', function (req, res){
+  var update = req.body; 
+  var query = {"_id": req.params.id };
+  var options = {new: true};
+  Todo.findOneAndUpdate(query, update, options, function (err, doc){
+    if (err){ console.error(err) };
+    if (doc) { res.json(doc)};
   })
 })
