@@ -26,6 +26,7 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     index = $scope.todos.indexOf(todo)
     console.log(index);
     $scope.todo = todo;
+    $scope.addButton = true;
   };
  // UPDATE TODO
   $scope.update = function () {
