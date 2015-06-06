@@ -26,10 +26,10 @@
             <button class="btn btn-warning" >Cancel</button></td>
             </td>
         </tr>
-        <tr ng-repeat="todo in todos">
+        <tr ng-repeat="todo in todos | orderBy: 'name'">
             <td>{{todo.name}}</td>
             <td><button class="btn btn-danger" ng-click="deleteTodo(todo._id)">Delete</td></button>  
-            <td><button class="btn btn-warning" >Edit</button></td>
+            <td><button class="btn btn-warning" ng-click="edit(todo)" >Edit</button></td>
         </tr>
       </thead>
     </div> <!-- div table -->
