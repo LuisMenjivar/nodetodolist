@@ -21,4 +21,11 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
       $scope.todos.splice(index, 1);
     })
   }
+
+  $scope.edit = function(todo){
+    index = $scope.todos.indexOf(todo)
+    console.log(index);
+    $scope.todo = todo;
+  };
 }])
+
