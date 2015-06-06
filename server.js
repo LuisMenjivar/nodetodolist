@@ -7,13 +7,16 @@ app.use(bodyParser.json());
 
 // SERVER
 app.use(express.static(__dirname + "/public"));
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 3000));
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-// Database
-var uristring = 'mongodb://localhost/test';
+// Database Configuration
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+'mongodb://localhost/test';
 mongoose.connect(uristring);
 
 var db = mongoose.connection;
