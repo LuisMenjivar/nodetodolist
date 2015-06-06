@@ -35,6 +35,8 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     $http.put('/todo/'+id, $scope.todo).success(function(response){
       $scope.todos.splice(index, 1, response);
     });
+    $scope.addButton = false;
+    $scope.deleteButton = false
     $scope.todo = '';
   };
   $scope.cancel = function (){
