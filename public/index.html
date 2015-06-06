@@ -23,7 +23,7 @@
             <td><input class="form-control" ng-model="todo.name"></td>
             <td><button class="btn btn-primary" ng-click="addTodo()" ng-disabled="addButton">Add Todo</button></td>
             <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
-            <button class="btn btn-warning">Cancel</button></td>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button></td>
             </td>
         </tr>
         <tr ng-repeat="todo in todos | orderBy: 'name'">

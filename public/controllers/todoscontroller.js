@@ -37,6 +37,11 @@ todoApp.controller('todosController', ['$scope', '$http', function ($scope, $htt
     });
     $scope.todo = '';
   };
+  $scope.cancel = function (){
+    $scope.addButton = false;
+    $scope.deleteButton = false
+    $scope.todo = '';
+  }
 
 }]) //end of Todos controller
 
