@@ -19,7 +19,7 @@ Start the MongoDB server, run:
 
     mongod
 
-Now start the application, run 
+Now start the application (Make sure your present working directory is `/nodetodolist`)
 
     node server.js
 
