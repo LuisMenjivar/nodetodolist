@@ -15,7 +15,7 @@ To clone the application run :
 
     git clone https://github.com/LuisMenjivar/nodetodolist.git
 
-Before you start the application, you need to start the MongoDB server **FIRST** otherwise the application will throw an error(it's hard coded in server.js), run:
+Start the MongoDB server, run:
 
     mongod
 
