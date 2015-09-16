@@ -14,6 +14,10 @@ To run this application locally, you need to install in your computer :
 To clone the application run :
 
     git clone https://github.com/LuisMenjivar/nodetodolist.git
+    
+Update the modules with 
+    
+    npm update
 
 Start the MongoDB server, run:
 
